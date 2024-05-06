@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print('"The Zen of Python", by TimPeters')
+import zen
+
+zen.print_zen()
+
