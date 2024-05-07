@@ -14,10 +14,7 @@ if number >= 0:
               ' and is less than 6 and not 0')
 else:
     neg = lastnum * -1
-    if neg > 5:
-        print(f'Last digit of {number} is {-lastnum}'
-              ' and is greater than 5')
-    elif neg == 0:
+    if neg == 0:
         print(f'Last digit of {number} is {lastnum}'
               ' and is 0')
     else:
