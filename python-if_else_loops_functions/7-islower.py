@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def islower(c):
-    deci = ord(c)
-    if deci <= 97 or deci < 123:
+    deci = ord(f"{c}")
+    if deci > 96 and deci < 123:
         return 1
     else:
         return 0
