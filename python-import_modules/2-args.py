@@ -13,4 +13,4 @@ if __name__ == "__main__":
     for i, x in enumerate(argv):
         if x == argv[0]:
             continue
-        print("{}: {}" .format(i,x))
+        print("{}: {}" .format(i, x))
