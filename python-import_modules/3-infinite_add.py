@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     for x in argv:
         if x == argv[0]:
-            continue
+            print("{}" .format(0))
         else:
             i = int(x)
             res += i
