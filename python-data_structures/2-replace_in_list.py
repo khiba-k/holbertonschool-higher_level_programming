@@ -4,5 +4,5 @@ def replace_in_list(my_list, idx, element):
     if idx < 0 or idx > num:
         print("{}" .format(my_list))
     else:
-        my_list.insert(idx, element)
+        my_list[idx] = element
         print("{}" .format(my_list))
