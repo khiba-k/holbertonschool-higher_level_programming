@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     length, i, = len(matrix), 0
-
+    
+    if matrix == None:
+        return None
     while i < length:
         row, j = matrix[i], 0
         l = len(row)
