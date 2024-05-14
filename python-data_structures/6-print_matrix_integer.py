@@ -1,17 +1,13 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    length, i = len(matrix), 0
+    length, i, = len(matrix), 0
 
     while i < length:
-        print("{}" .format(matrix[i]))
+        row, j = matrix[i], 0
+        l = len(row)
+
+        while j < l:
+            print("{:d}" .format(row[j]), end=" ")
+            j += 1
+        print()
         i += 1
-
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-print_matrix_integer(matrix)
-print("--")
-print_matrix_integer()
