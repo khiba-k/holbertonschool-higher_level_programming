@@ -2,8 +2,8 @@
 def print_matrix_integer(matrix=[[]]):
     length, i, = len(matrix), 0
     
-    if not matrix:
-        print("1")
+    if not matrix[0]:
+        print()
     while i < length:
         row, j = matrix[i], 0
         l = len(row)
