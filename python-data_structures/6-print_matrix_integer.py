@@ -9,7 +9,8 @@ def print_matrix_integer(matrix=[[]]):
         while j < l:
             if j == l - 1:
                 print("{:d}" .format(row[j]))
-            print("{:d}" .format(row[j]), end=" ")
+            else:
+                print("{:d}" .format(row[j]), end=" ")
             j += 1
         print()
         i += 1
