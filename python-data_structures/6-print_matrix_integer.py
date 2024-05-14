@@ -6,9 +6,8 @@ def print_matrix_integer(matrix=[[]]):
         print()
     while i < length:
         row, j = matrix[i], 0
-        l = len(row)
 
-        while j < l:
+        while j < len(row):
             if j == l - 1:
                 print("{:d}" .format(row[j]))
             else:
