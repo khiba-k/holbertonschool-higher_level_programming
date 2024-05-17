@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-      new = []
+    new = []
     new.extend(my_list)
     
     replaced = False
