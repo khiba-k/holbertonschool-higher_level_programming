@@ -4,4 +4,3 @@ def print_sorted_dictionary(a_dictionary):
 
     for x in alpha:
         print(f"{x}: {a_dictionary[x]}")
-
