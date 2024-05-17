@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    ints = []
+    greatest = float(-f)
+    greatKey = None
 
-    for x in a_dictionary.values():
-        ints.append(x)
-        ints.sort()
+    for key, value in a_dictionary.values():
+        if value > greatest:
+            greatest = value
+            greatKey = key
 
-    return ints[-1]
+    return greatkey
