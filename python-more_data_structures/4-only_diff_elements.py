@@ -6,7 +6,7 @@ def only_diff_elements(set_1, set_2):
         if x != set_1:
             new.append(x)
     for y in set_2:
-        if x != set_1:
+        if y != set_1:
             new.append(y)
 
     return new
