@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    greatest = float(-f)
+    greatest = float('-f')
     greatKey = None
 
     for key, value in a_dictionary.values():
