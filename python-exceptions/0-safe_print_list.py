@@ -1,17 +1,21 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     i, length = 0, 0
+    container = ""
 
-    for x in my_list:
+    for loop in my_list:
         length += 1
     try:
         if x <= length:
             while i < x:
-                if i == x - 1:
-                    print({} .format(mylist[i])
-                else:
-                    print({} .format(mylist[i], end="")
-    except:
-        print("X is larger than the length of the list")
+                container += str(my_list[i])
+                i += 1
+            print("{}" .format(container))
+        else:
+            print(f"{my_list}")
+        return length
+    except IndexError:
+            print(f"{my_list}")
+            return length
 
     return x
