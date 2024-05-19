@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+# -*- coding: UTF-8 -*-
 """
 1-square.py: is a class Square that defines a square
 """
