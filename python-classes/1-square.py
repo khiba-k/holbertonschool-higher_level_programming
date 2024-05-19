@@ -1,5 +1,4 @@
-#!/usr/nin/python3
-
+#!/usr/bin/python3
 """
 1-square.py: is a class Square that defines a square
 """
