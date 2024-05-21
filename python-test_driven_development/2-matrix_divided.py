@@ -40,13 +40,8 @@ def matrix_divided(matrix, div):
     if not all(len(row) == row_length for row in matrix):
         raise TypeError("Each row of the matrix must have the same size")
     
-    if div == float('inf') or div == -float('inf'):
-        for row in matrix:
-            new_row = [0.0 for _ in row]
-            lst.append(new_row)
-    else:
-        for row in matrix:
-            new_row = []
+    for row in matrix:
+        new_row = []
         for element in row:
             c = round(element / div, 2)
             new_row.append(c)
