@@ -46,7 +46,7 @@ def matrix_divided(matrix, div):
             lst.append(new_row)
     else:
         for row in matrix:
-        new_row = []
+            new_row = []
         for element in row:
             c = round(element / div, 2)
             new_row.append(c)
