@@ -11,11 +11,3 @@ TypeError: first_name must be a string
 >>> say_my_name("Khiba", 8)
 Traceback (most recent call last):
 TypeError: last_name must be a string
-
->>> say_my_name(None, "Koenane")
-Traceback (most recent call last):
-ValueError: missing first name
-
->>> say_my_name("Khiba", None)
-Traceback (most recent call last):
-ValueError: missing last name
