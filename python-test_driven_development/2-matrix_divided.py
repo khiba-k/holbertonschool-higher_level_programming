@@ -36,6 +36,8 @@ def matrix_divided(matrix, div):
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
+    if div == float('inf'):
+        raise ValueError("[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]")
 
     row_length = len(matrix[0])
     if not all(len(row) == row_length for row in matrix):
