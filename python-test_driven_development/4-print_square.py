@@ -1,5 +1,25 @@
 #!/usr/bin/python3
+
+"""
+    Function divides all elements of a matrix
+
+    Example:
+       size = 2
+
+       print_square(size)
+
+       ##
+       ##
+"""
+
 def print_square(size):
+    """
+        Args:
+            size: size of square
+
+        Returns:
+            a square the size of square arg
+    """
     width, height 0, 0
 
     if not isinstance(size, int):
