@@ -31,3 +31,15 @@ ValueError: cannot convert float NaN to integer
 >>> add_integer(2, float('nan'))
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
+
+>>> add_integer(2, None)
+Traceback (most recent call last):
+ValueError: missing one argument
+
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+ValueError: missing one argument
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+ValueError: missing both arguments
