@@ -20,7 +20,7 @@ def print_square(size):
         Returns:
             a square the size of square arg
     """
-    width, height 0, 0
+    width, height = 0, 0
 
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
