@@ -1,21 +1,21 @@
 Print first and last name
 Examples:
 >>> say_my_name = __import__('3-say_my_name').say_my_name
->>> def say_my_name("Khiba", "Koenane")
+>>> say_my_name("Khiba", "Koenane")
 My name is Khiba Koenane
 
->>> def say_my_name(5, last_name="")
+>>> say_my_name(5, last_name="")
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> def say_my_name(first_name, 8)
+>>> say_my_name(first_name, 8)
 Traceback (most recent call last):
 TypeError: last_name must be a string
 
->>> def say_my_name(None, "Koenane")
+>>> say_my_name(None, "Koenane")
 Traceback (most recent call last):
 ValueError: missing first name
 
->>> def say_my_name("Khiba", None)
+>>> say_my_name("Khiba", None)
 Traceback (most recent call last):
 ValueError: missing last name
