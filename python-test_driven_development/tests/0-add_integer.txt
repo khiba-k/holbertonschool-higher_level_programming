@@ -1,0 +1,16 @@
+Add two numbers and return result.
+Examples:
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 5)
+>>> 7
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, "c")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: b must be an integer
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer("b", 4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: a must be an integer
