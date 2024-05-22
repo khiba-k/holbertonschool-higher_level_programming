@@ -33,4 +33,4 @@ def add_integer(a, b=98):
         b = int(b)
     result = a + b
 
-    return result
+    return int(result)
