@@ -27,22 +27,10 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     elif not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
-    elif a is None or b is None:
-        raise ValueError("missing one argument")
-    elif a is None and b is None:
-        raise ValueError("missing both arguments")
     elif a is type(float):
         a = int(a)
     elif b is type(float):
         b = int(b)
     result = a + b
 
-    #if math.isinf(result):
-       # raise OverflowError("result is too large")
-    print(f"res {result}")
     return result
-
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
