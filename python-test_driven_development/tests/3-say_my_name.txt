@@ -14,8 +14,8 @@ TypeError: last_name must be a string
 
 >>> def say_my_name(None, "Koenane")
 Traceback (most recent call last):
-TypeError: missing first name
+ValueError: missing first name
 
 >>> def say_my_name("Khiba", None)
 Traceback (most recent call last):
-TypeError: missing last name
+ValueError: missing last name
