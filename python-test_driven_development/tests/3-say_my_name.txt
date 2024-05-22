@@ -4,11 +4,11 @@ Examples:
 >>> say_my_name("Khiba", "Koenane")
 My name is Khiba Koenane
 
->>> say_my_name(5, last_name="")
+>>> say_my_name(5, "Koenane")
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name(first_name, 8)
+>>> say_my_name("Khiba", 8)
 Traceback (most recent call last):
 TypeError: last_name must be a string
 
