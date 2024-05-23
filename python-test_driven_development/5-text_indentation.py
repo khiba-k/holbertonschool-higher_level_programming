@@ -23,23 +23,20 @@ def text_indentation(text):
             A sentence with the first and last name
     """
 
-    if not isinstance(text, str):
+     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    chars_to_check = ['.', '?', ':']
-    result = []
-    i = 0
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
 
-    while i < len(text):
-        if text[i] in chars_to_check:
-            result.append(text[i])
-            result.append("\n")
-            i += 1
-            while i < len(text) and text[i] == ' ':
-                i += 1
-        else:
-            result.append(text[i])
-            i += 1
-    
-    formatted_text = "".join(result).strip()
-    print(formatted_text)
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
+            continue
+        c += 1
