@@ -33,4 +33,3 @@ def print_square(size):
             width += 1
         print()
         height += 1
-
