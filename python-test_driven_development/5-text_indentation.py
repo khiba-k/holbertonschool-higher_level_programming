@@ -40,4 +40,6 @@ def text_indentation(text):
         else:
             result.append(text[i])
             i += 1
-    print("".join(result))
+    
+    formatted_text = "".join(result).strip()
+    print(formatted_text)
