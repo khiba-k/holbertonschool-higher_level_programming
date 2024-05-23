@@ -33,7 +33,7 @@ def text_indentation(text):
     while i < len(text):
         if text[i] in chars_to_check:
             result.append(text[i])
-            result.append("\n\n")
+            result.append("\n")
             i += 1
             while i < len(text) and text[i] == ' ':
                 i += 1
