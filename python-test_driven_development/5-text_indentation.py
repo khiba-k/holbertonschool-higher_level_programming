@@ -23,7 +23,7 @@ def text_indentation(text):
             A sentence with the first and last name
     """
 
-     if not isinstance(text, str):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     c = 0
