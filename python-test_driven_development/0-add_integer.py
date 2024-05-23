@@ -21,9 +21,8 @@ def add_integer(a, b=98):
         Returns:
             Sum of the two integers
     """
-    result = 0
 
-     if not isinstance(a, (float, int)):
+    if not isinstance(a, (float, int)):
         if a is not None:
             raise TypeError("a must be an integer")
         raise ValueError("a must be an integer")
