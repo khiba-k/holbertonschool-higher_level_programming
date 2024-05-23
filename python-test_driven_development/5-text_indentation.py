@@ -7,7 +7,7 @@ def text_indentation(text):
     result = []
     i = 0
 
-     while i < len(text):
+    while i < len(text):
         if text[i] in chars_to_check:
             result.append(text[i])
             result.append("\n\n")
