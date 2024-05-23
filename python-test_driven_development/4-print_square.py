@@ -12,6 +12,7 @@
        ##
 """
 
+
 def print_square(size):
     """
         Args:
