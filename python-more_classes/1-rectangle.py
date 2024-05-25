@@ -3,32 +3,25 @@
 
 
 class Rectangle:
-    """
-    Class Rectangle defines a Rectangle
-    """
-
+    """Defines rectangle"""
     def __init__(self, width=0, height=0):
-        """
-        Initialize Rectangle with width and height
-    
-
+        """Constructor
         Args:
-            width: width of the rectangle
-            height: height of the rectangle
+            width: width of rectangle
+            height: height of rectangle
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """
-        Gets width of rectangle
-
-        Returns:
-             width of rectangle
+        """Gets/sets width of rectangle
+            Returns:
+                ValueError: if width is less than 0
+                TypeError: if width not integer
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -37,13 +30,12 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @height
+    @property
     def height(self):
         """
-        Gets value of rectangle
-
-        Returns:
-            Height of rectangle
+        Gets/sets height of rectanglheightReturns:
+                ValueError: if height is less than 0
+                TypeError: if height not integer
         """
         return self.__height
 
