@@ -1,0 +1,29 @@
+>>> MyList = __import__('1-my_list').MyLis
+
+>>> my_list = MyList()
+>>> my_list.print:print_sorted()
+[]
+
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> my_list.append(True)
+>>> my_list.append(False)
+[False, True]
+
+>>> my_list.append('b')
+>>> my_list.append('a')
+>>> my_list.append('d')
+>>> my_list.append('c')
+['a', 'b', 'c', 'd']
+
+>>> my_list.append('a')
+>>> my_list.append(1)
+Traceback (most recent call last):
+...
+TypeError: unorderable types
