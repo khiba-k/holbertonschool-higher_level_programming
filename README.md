@@ -1,2 +1,1 @@
-# holbertonschool-higher_level_programming
-Holberton School High LeveL Programming Projects 
+Python Abstract Classes and Interfaces Project
