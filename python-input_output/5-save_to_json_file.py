@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """function object to file as JSON"""
 import json
-import os
 
 
 def save_to_json_file(my_obj, filename):
@@ -11,6 +10,5 @@ def save_to_json_file(my_obj, filename):
         filename: file to write to
     """
 
-    os.chmod(filename, 0o644)
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(my_obj, f)
