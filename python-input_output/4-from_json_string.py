@@ -4,12 +4,12 @@ import json
 
 
 def from_json_string(my_str):
-    """Function returns object represented by JSON string
+    """Function returns object from JSON string
     Args:
         my_str: JSON string
     Return:
         Returns python object
     """
 
-    ret = json.load(my_str)
+    ret = json.loads(my_str)
     return ret
