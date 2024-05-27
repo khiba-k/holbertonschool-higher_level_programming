@@ -9,7 +9,7 @@ def read_file(filename=""):
     Return:
         UTF8 text file
     """
-    with open("filename", "r", encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         read_file = f.read()
         print(read_file)
     return read_file
