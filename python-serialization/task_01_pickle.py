@@ -20,11 +20,11 @@ class CustomObject:
         """method prints out attributes"""
         print(f"Name: {name}")
         print(f"age: {age}")
-        print(f"Is Student: {is_boolean}")
+        print(f"Is Student: {is_student}")
 
     def serialize(self, filename):
         """method serializes the current instance of the object"""
-        with open(filename, "wb", encoding="utf-8") as f:
+        with open(filename, "wb") as f:
             pickle.dump(self, f)
 
     @classmethod
