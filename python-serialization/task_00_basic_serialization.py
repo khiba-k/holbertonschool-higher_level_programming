@@ -12,7 +12,7 @@ def serialize_and_save_to_file(data, filename):
     """
 
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, filename)
+        json.dump(data, f)
 
 def load_and_deserialize(filename):
     """Function desirializes JSON data into python dictionery
@@ -23,5 +23,5 @@ def load_and_deserialize(filename):
     """
 
     with open(filename, "r", encoding="utf-8") as f:
-        dictionery = json.load(filename)
+        dictionery = json.load(f)
     return dictionery
