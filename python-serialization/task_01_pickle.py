@@ -18,9 +18,9 @@ class CustomObject:
 
     def display(self):
         """method prints out attributes"""
-        print(f"Name: {name}")
-        print(f"age: {age}")
-        print(f"Is Student: {is_student}")
+        print(f"Name: {self.name}")
+        print(f"age: {self.age}")
+        print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
         """method serializes the current instance of the object"""
@@ -30,7 +30,6 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         """method returns instance of custom object"""
-        with open(filename, "rb", encoding="utf-8") as f:
+        with open(filename, "rb") as f:
             ret = pickle.load(f)
         return ret
-
