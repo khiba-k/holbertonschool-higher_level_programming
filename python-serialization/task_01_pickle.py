@@ -26,7 +26,7 @@ class CustomObject:
         """method serializes the current instance of the object"""
         try:
             with open(filename, "wb") as f:
-            pickle.dump(self, f)
+                pickle.dump(self, f)
         except:
             return None
 
