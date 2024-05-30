@@ -27,9 +27,7 @@ class CustomObject:
         """method serializes the current instance of the object"""
         with open(filename, "wb") as f:
             pickle.dump(self, f)
-    except FileNotFoundError:
-        return None
-    except (pickle.PickleError, IOError):
+    except:
         return None
 
     @classmethod
@@ -38,8 +36,6 @@ class CustomObject:
         try:
             with open(filename, "rb") as f:
             ret = pickle.load(f)
-        except FileNotFoundError:
-            return None
-        except (pickle.PickleError, IOError):
+        except:
             return None
         return ret
