@@ -22,14 +22,24 @@ class CustomObject:
         print(f"age: {self.age}")
         print(f"Is Student: {self.is_student}")
 
-    def serialize(self, filename):
+    try:
+        def serialize(self, filename):
         """method serializes the current instance of the object"""
         with open(filename, "wb") as f:
             pickle.dump(self, f)
+    except FileNotFoundError:
+        return None
+    except (pickle.PickleError, IOError):
+        return None
 
     @classmethod
     def deserialize(cls, filename):
         """method returns instance of custom object"""
-        with open(filename, "rb") as f:
+        try:
+            with open(filename, "rb") as f:
             ret = pickle.load(f)
+        except FileNotFoundError:
+            return None
+        except (pickle.PickleError, IOError):
+            return None
         return ret
