@@ -21,7 +21,7 @@ def convert_csv_to_json(csv_file):
         return False
     try:
         with open(data.json, "w", encoding="utf-8") as f:
-            json.dump(data, f)
-        return True
+            json.dump(data, f, indent=4)
     except:
         return False
+    return True
