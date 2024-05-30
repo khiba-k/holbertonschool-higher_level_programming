@@ -35,7 +35,7 @@ class CustomObject:
         """method returns instance of custom object"""
         try:
             with open(filename, "rb") as f:
-            ret = pickle.load(f)
+                ret = pickle.load(f)
+            return ret
         except:
             return None
-        return ret
