@@ -22,13 +22,13 @@ class CustomObject:
         print(f"age: {self.age}")
         print(f"Is Student: {self.is_student}")
 
-    try:
-        def serialize(self, filename):
+    def serialize(self, filename):
         """method serializes the current instance of the object"""
-        with open(filename, "wb") as f:
+        try:
+            with open(filename, "wb") as f:
             pickle.dump(self, f)
-    except:
-        return None
+        except:
+            return None
 
     @classmethod
     def deserialize(cls, filename):
