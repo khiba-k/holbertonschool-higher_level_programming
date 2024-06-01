@@ -14,7 +14,7 @@ def fetch_and_print_posts():
         data = response.json()
         
         for titles in data:
-            print(titles)
+            print(titles["title"])
 
     else:
         print(f"Failed to fetch data. Status code: {status}")
