@@ -6,30 +6,43 @@ import requests
 
 def fetch_and_print_posts():
     """function fetches and prints"""
-    response = requests.get('https://jsonplaceholder.typicode.com/todos/1')
-    status = response.status_code 
+    url = "https://jsonplaceholder.typicode.com/posts"
 
-    print(f"Status Code: {status}")
-    if status == 200:
-        data = response.json()
-        
-        for titles in data:
-            print(titles["title"])
+    try:
+        res = requests.get(url)
+        res.raise_for_status()  # Raise an exception for HTTP errors
+    except requests.RequestException as e:
+        print(f"Failed to retrieve data: {e}")
+        return
 
-    else:
-        print(f"Failed to fetch data. Status code: {status}")
+    print("Status Code: {}".format(res.status_code))
+
+    if res.headers.get("Content-Type") == "application/json; charset=utf-8":
+        json_data = res.json()
+        for post in json_data:
+            print(post["title"])
 
 def fetch_and_save_posts():
-    """function fetches response and saves to csv"""
-    response = requests.get('https://jsonplaceholder.typicode.com/todos/1')
-    status = response.status_code
+    """
+    Fetches all posts from JSONPlaceholder and saves them in a csv file.
+    """
+    url = "https://jsonplaceholder.typicode.com/posts"
 
-    if status == 200:
-        data = response.json()
+    try:
+        res = requests.get(url)
+    except:
+        print("Failed to retrieve data")
+        return
 
-        with open('posts.csv', "w", newline='') as csvf:
-            field = list(data.keys())
+    json_data = res.json()
 
-            csv_writer = csv.DictWriter(csvf, fieldnames=field)
-            csv_writer.writeheader()
-            csv_writer.writerow(data)
+    csvfile = "posts.csv"
+
+    filtered_data = [{key: post[key] for key in ('id', 'title', 'body')} for post in json_data]
+
+    headers = ['id', 'title', 'body']
+
+    with open(csvfile, "w", newline="") as file:
+        csv_write = csv.DictWriter(file, fieldnames=headers)
+        csv_write.writeheader()
+        csv_write.writerows(filtered_data)
