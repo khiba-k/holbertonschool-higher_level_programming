@@ -17,7 +17,7 @@ def fetch_and_print_posts():
             print(titles)
 
 def fetch_and_save_posts():
-    ""function fetches response and saves to csv"""
+    """function fetches response and saves to csv"""
     response = requests.get('https://jsonplaceholder.typicode.com/todos/1')
     status = response.status_code
 
