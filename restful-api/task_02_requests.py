@@ -1,32 +1,31 @@
 #!/usr/bin/python3
 """Defines function that fetches posts"""
-import json
+import csv
 import requests
 
 
 def fetch_and_print_posts():
     """function fetches and prints"""
     response = requests.get('https://jsonplaceholder.typicode.com/todos/1')
-    status = response.status.code 
+    status = response.status_code 
 
     print(f"Status Code: {status}")
-    if response.status.code == 200:
+    if status == 200:
         data = response.json()
         
         for titles in data:
-            print("{titles}")
+            print(titles)
 
 def fetch_and_save_posts():
-    """function fetches and saves posts"""
+    ""function fetches response and saves to csv"""
     response = requests.get('https://jsonplaceholder.typicode.com/todos/1')
-    status = response.status.code
+    status = response.status_code
 
-    if response.status.code == 200:
-        data = response.json
-        
-        with open("posts.csv", "w") as file:
-            writer = csv.write(file)
+    if status == 200:
+        data = response.json()
 
-            for item in data:
-                writer.writerow([item])
+        with open('posts.csv', "w", newline='') as csvf:
+            field = list(data.keys())
 
+            csv_writer = csv.DictWriter(csvf, fieldnames=field)
+            csv_writer.writerow(data)
