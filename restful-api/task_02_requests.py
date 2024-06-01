@@ -16,6 +16,9 @@ def fetch_and_print_posts():
         for titles in data:
             print(titles)
 
+    else:
+        print(f"Failed to fetch data. Status code: {status}")
+
 def fetch_and_save_posts():
     """function fetches response and saves to csv"""
     response = requests.get('https://jsonplaceholder.typicode.com/todos/1')
@@ -28,4 +31,5 @@ def fetch_and_save_posts():
             field = list(data.keys())
 
             csv_writer = csv.DictWriter(csvf, fieldnames=field)
+            csv_writer.writeheader()
             csv_writer.writerow(data)
