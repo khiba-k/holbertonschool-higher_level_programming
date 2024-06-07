@@ -1,0 +1,31 @@
+service:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: khiba-k
+      POSTGRES_PASSWORD: khiba-k
+      POSTGRES_DB: data_base
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - db-admin
+
+  admin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: khibakoenane@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: khiba-k
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - db-admin
+    depends-on:
+      - database
+
+volumes:
+  postgres_data:
+    pgadmin_data:
