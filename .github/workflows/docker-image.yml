@@ -9,6 +9,6 @@ jobs:
       - name: Login
         run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u khiba-k --password-stdin
       - name: build image
-        run: docker build devops-essentials/docker-alpine-extended --tag ghcr.io/khiba-k/test_workflow:latest
+        run: docker build devops_essentials/docker-alpine-extended --tag ghcr.io/khiba-k/test_workflow:latest
       - name: Push image
         run: docker push ghcr.io/khiba-k/test_workflow:latest
