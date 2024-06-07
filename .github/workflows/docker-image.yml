@@ -1,0 +1,14 @@
+name: docker-image
+on: [push]
+jobs:
+  createImg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check repo
+        uses: actions/checkout@v2
+      - name: Login
+        run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u khiba-k --password-stdin
+      - name: build image
+        run: docker build . --tag ghcr.io/khiba-k/test_workflow:latest
+      - name: Push image
+        run: docker push ghcr.io/khiba-k/test_workflow:latest
