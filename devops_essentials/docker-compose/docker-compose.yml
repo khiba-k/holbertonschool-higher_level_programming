@@ -24,7 +24,7 @@ service:
     networks:
       - db-admin
     depends-on:
-      - database
+      - db
 
 volumes:
   postgres_data:
