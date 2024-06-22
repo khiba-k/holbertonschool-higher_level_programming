@@ -1,2 +1,2 @@
 -- Script lists all databases
-SHOW DATABASES
+SHOW TABLES;
