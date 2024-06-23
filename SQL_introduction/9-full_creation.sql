@@ -1,6 +1,6 @@
 -- Script creates table
 CREATE TABLE IF NOT EXISTS second_table (
-	id INT,
+	id INT NOT NULL,
 	name VARCHAR(256),
 	score INT
 );
