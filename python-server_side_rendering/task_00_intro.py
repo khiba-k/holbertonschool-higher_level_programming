@@ -18,9 +18,18 @@ def generate_invitations(template, attendees):
         print("Template is supposed to be a string")
         return
     
-    elif not isinstance(attendees, list) or attendees is None:
+    if not isinstance(attendees, list) or attendees is None:
         print("Attendees is supposed to be a list")
         return
+
+    if not template:
+        print("Template is empty, no output files generated.")
+        return
+    
+    if not attendees:
+        print("No data provided, no output files generated.")
+        return
+    
     
     try:
         for x, attendee in enumerate(attendees, start=1):
