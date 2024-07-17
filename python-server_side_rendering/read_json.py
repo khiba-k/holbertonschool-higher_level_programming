@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import json
 import csv
+import sqlite3
 
 def read(filename):
      with open(filename, "r") as file:
@@ -24,3 +25,19 @@ def read_csv():
 				"category": row['category'],
 				"price": float(row['price'])
             })
+
+def read_db():
+    products = []
+    conn = sqlite3.connect('products.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM Products")
+    product = cursor.fetchall()
+    conn.close()
+    for row in product:
+        products.append({
+            'id': row[0],
+            'name': row[1],
+            'category': row[2],
+            'price': row[3]
+        })
+    return products
