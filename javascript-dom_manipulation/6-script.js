@@ -7,8 +7,10 @@ const fetched = fetch('https://swapi-api.hbtn.io/api/people/5/?format=json').the
 ).then(data => {
     const name = data.name;
     myDiv.textContent = name;
-}).catch(error => {
-    console.error('The was a problem with the fetch operation');
+})
+.catch(error => {
+    console.error('Error:', error);
+    myDiv.textContent = 'Error fetching character';
 });
 
 
