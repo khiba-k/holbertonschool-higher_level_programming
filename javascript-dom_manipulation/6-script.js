@@ -5,7 +5,8 @@ const fetched = fetch('https://swapi-api.hbtn.io/api/people/5/?format=json').the
         return response.json();
     }
 ).then(data => {
-    myDiv.textContent = JSON.stringify(data);
+    const name = data.name;
+    myDiv.textContent = name;
 }).catch(error => {
     console.error('The was a problem with the fetch operation');
 });
