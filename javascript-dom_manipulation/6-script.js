@@ -1,4 +1,4 @@
-const myDiv = document.body.querySelector("#id");
+const myDiv = document.body.querySelector("#character");
 
 const fetched = fetch('https://swapi-api.hbtn.io/api/people/5/?format=json').then(
     response => {
